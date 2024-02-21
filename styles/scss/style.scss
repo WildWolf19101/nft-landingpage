@@ -1,0 +1,153 @@
+@import './reset';
+
+:root {
+    --primarry-color: #1663F9;
+
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-dark: #1F2326;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+body {
+    font-family: 'Sora';
+    margin: 0 auto;
+}
+
+
+// header
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto 0;
+    max-width: 1240px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+
+    img {
+        width: 36px;
+    }
+
+    &-text {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: calc(28 / 20);
+        color: var(--color-black);
+    }
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+
+    font-family: 'Poppins';
+
+
+    &-item {
+
+        a {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: calc(24 / 16);
+            color: var(--color-black);
+            text-decoration: none;
+        }
+    }
+
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--primarry-color);
+    padding: 18px 50px;
+    border-radius: 100px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+}
+
+// main
+
+.main {
+    margin: 0 auto;
+}
+
+.hero {
+    margin: 0 auto;
+
+    &-button {
+        margin: 48px auto 0;
+        font-weight: 500;
+    }
+}
+
+.topic {
+    text-align: center;
+
+
+    &-title {
+        margin: 40px auto 0;
+        font-weight: 800;
+        font-size: 60px;
+        line-height: calc(76 / 60);
+        color: var(--color-dark);
+        margin: 40px auto 0;
+        max-width: 1010px;
+    }
+
+    &-text {
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: calc(28 / 20);
+        color: var(--color-dark);
+        max-width: 653px;
+        margin: 30px auto 0;
+    }
+}
+
+.text-gradient {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #1663F9, #F961D8);
+}
+
+.image {
+
+    &-top {
+        max-width: 1080px;
+        display: flex;
+        margin: 101px auto 0;
+    }
+
+    &-item {
+        img {
+            max-width: 360px;
+            height: 494px;
+            object-fit: cover;
+            border-top-left-radius: 1000px;
+            border-top-right-radius: 1000px;
+        }
+
+        &:not(:nth-child(2)) {
+            transform: translateY(100px);
+        }
+    }
+}
