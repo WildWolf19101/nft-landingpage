@@ -2,13 +2,17 @@
 
 :root {
     --primarry-color: #1663F9;
+    --secondary-color: #F5953A;
 
     --color-black: #000000;
     --color-white: #FFFFFF;
+    --color-white1: #F0F0F0;
     --color-dark: #1F2326;
     --color-dark1: #81879D;
     --color-gray: #C4C4C4;
     --color-gray2: #5D6C6C;
+    --color-gray3: #8B9DC0;
+    --color-grey: #B1B5C1;
 }
 
 img {
@@ -333,4 +337,319 @@ button {
     line-height: 1.5;
     font-family: "Poppins";
     color: var(--color-dark);
+}
+
+// trending
+.trending {
+    margin: 120px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    max-width: 1167px;
+
+    &-image {
+        img {
+            border-top-left-radius: 1000px;
+            border-top-right-radius: 1000px;
+            width: 470px;
+            height: 470px;
+            object-fit: cover;
+        }
+    }
+
+    &-title {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 1.5;
+        color: var(--color-dark);
+    }
+
+    &-author {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        margin-top: 10px;
+    }
+
+    &-time {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 340px;
+        gap: 20px;
+        margin-top: 38px;
+    }
+
+    &-bid {
+        margin-top: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        max-width: 117px;
+    }
+
+    &-button {
+        margin-top: 38px;
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.author {
+    &-image {
+        width: 30px;
+        height: 30px;
+        border-radius: 1000px;
+    }
+
+    &-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.5;
+        color: var(--color-dark1);
+
+        span {
+            color: var(--primarry-color);
+            font-weight: 600;
+        }
+    }
+}
+
+.time {
+    &-item {
+        color: var(--primarry-color);
+        width: 70px;
+        height: 70px;
+        border-radius: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background-color: currentColor;
+            opacity: 0.1;
+            cursor: pointer;
+        }
+    }
+
+    &__number {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    &__date {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--color-gray3);
+    }
+}
+
+.bid {
+    &-info {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--color-grey);
+    }
+
+    &-cost {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.5;
+        color: var(--color-dark1);
+    }
+}
+
+.button {
+    &-view {
+        background-color: var(--color-dark);
+    }
+}
+
+// market
+.market {
+    margin: 120px auto 0;
+    max-width: 1170px;
+
+    // topic
+    &-topic {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        h2 {
+            font-weight: 700;
+            font-size: 50px;
+            line-height: calc(60 / 50);
+        }
+
+        span {
+            color: var(--primarry-color);
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1.5;
+            color: var(--color-dark);
+        }
+
+        &__img {
+            &-fire {
+                width: 33px;
+                height: 44px;
+            }
+
+            &-arrow {
+                &-right {
+                    width: 24px;
+                }
+            }
+        }
+    }
+
+    // filter
+    &-filters {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 55px auto 40px;
+    }
+
+    &-filter {
+        text-decoration: none;
+        padding: 18px 30px;
+        background-color: white;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--color-dark);
+        border: 1px solid var(--color-white1);
+        border-radius: 100px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    // product
+    &-products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-product {
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 20px 80px -16px #504B560F;
+        color: var(--color-dark);
+
+        &:hover {
+            .product-content {
+                background-color: var(--color-dark);
+                color: var(--color-white);
+            }
+        }
+    }
+}
+
+.product {
+    &-image {
+        margin-bottom: 14px;
+        position: relative;
+
+        img {
+            height: 330px;
+            border-radius: 14px;
+            object-fit: cover;
+        }
+    }
+
+    &-avatar {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 18px;
+        bottom: 23px;
+        z-index: 2;
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &-content {
+        padding: 14px 20px;
+        margin-top: 14px;
+        border-radius: 10px;
+
+        position: relative;
+
+        p {
+            font-weight: 500;
+            font-size: 8px;
+            line-height: 1.5;
+            margin-top: 6px;
+        }
+    }
+
+    &-text {
+
+        text-decoration: none;
+        color: var(--secondary-color);
+    }
+
+    &-title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    &-price {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        margin-top: 12px;
+
+        img {
+            width: 16px;
+            height: 16px;
+            border-radius: 100px;
+        }
+    }
+
+    &-cost {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    &-button {
+        font-weight: 500;
+        font-size: 16px;
+        padding: 8px 16px;
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        transform: translateY(-30%);
+
+    }
 }
