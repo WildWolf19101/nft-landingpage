@@ -484,9 +484,15 @@ button {
   font-size: 16px;
   line-height: 1.5;
 }
+.market-filter:hover {
+  background-color: var(--primarry-color);
+  color: var(--color-white);
+  transition: all 0.2s linear;
+}
 .market-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 .market-product {
   padding: 20px;
@@ -497,6 +503,7 @@ button {
 .market-product:hover .product-content {
   background-color: var(--color-dark);
   color: var(--color-white);
+  transition: all 0.2s linear;
 }
 
 .product-image {

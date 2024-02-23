@@ -532,6 +532,8 @@ button {
         align-items: center;
         gap: 10px;
         margin: 55px auto 40px;
+
+
     }
 
     &-filter {
@@ -547,12 +549,19 @@ button {
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
+
+        &:hover {
+            background-color: var(--primarry-color);
+            color: var(--color-white);
+            transition: all 0.2s linear;
+        }
     }
 
     // product
     &-products {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
     }
 
     &-product {
@@ -565,6 +574,8 @@ button {
             .product-content {
                 background-color: var(--color-dark);
                 color: var(--color-white);
+                transition: all 0.2s linear;
+
             }
         }
     }
