@@ -1,0 +1,29 @@
+body {
+    font-family: "Sora", sans-serif;
+    margin: 0 auto;
+    color: $color-dark;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+button {
+    display: inline-block;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--primarry-color);
+    padding: 18px 50px;
+    border-radius: 100px;
+    font-family: 'Poppins';
+    @include text(600, 16px, 1.5);
+}
+
+.title {
+    @include text(700, 50px, 1.5);
+}
