@@ -53,7 +53,7 @@ body {
 body {
   font-family: "Sora", sans-serif;
   margin: 0 auto;
-  color: #1F2326;
+  color: var(--color-dark);
 }
 
 img {
@@ -72,7 +72,7 @@ button {
   background-color: var(--primarry-color);
   padding: 18px 50px;
   border-radius: 100px;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -82,6 +82,24 @@ button {
   font-weight: 700;
   font-size: 50px;
   line-height: 1.5;
+}
+
+.text-gradient {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, #1663F9, #F961D8);
+}
+
+.img-item {
+  max-width: 330px;
+  height: 330px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.img-icon-like {
+  width: 24px;
+  height: 24px;
 }
 
 .header {
@@ -99,7 +117,7 @@ button {
   gap: 10px;
   text-decoration: none;
 }
-.logo img {
+.logo-image {
   width: 36px;
   height: 36px;
 }
@@ -116,12 +134,22 @@ button {
   list-style: none;
   font-family: "Poppins", sans-serif;
 }
-.menu-item a {
+.menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.menu-text {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: var(--color-black);
   text-decoration: none;
+}
+.menu-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .main {
@@ -131,14 +159,17 @@ button {
 .hero {
   margin: 0 auto;
 }
+.hero-topic {
+  text-align: center;
+}
+.hero-images {
+  position: relative;
+}
 .hero-button {
   margin: 48px auto 0;
   font-weight: 500;
 }
 
-.topic {
-  text-align: center;
-}
 .topic-title {
   margin: 40px auto 0;
   font-weight: 800;
@@ -158,16 +189,6 @@ button {
   margin: 30px auto 0;
 }
 
-.text-gradient {
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(to right, #1663F9, #F961D8);
-}
-
-.image {
-  position: relative;
-}
 .image-top {
   max-width: 1080px;
   display: flex;
@@ -175,15 +196,15 @@ button {
   display: flex;
   justify-content: center;
 }
-.image-item img {
+.image-items:not(:nth-child(2)) {
+  transform: translateY(100px);
+}
+.image-item {
   max-width: 360px;
   height: 494px;
   object-fit: cover;
   border-top-left-radius: 1000px;
   border-top-right-radius: 1000px;
-}
-.image-item:not(:nth-child(2)) {
-  transform: translateY(100px);
 }
 .image-bottom {
   max-width: 1170px;
@@ -196,7 +217,6 @@ button {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   background-color: var(--color-white);
-  margin: 0 auto;
   position: relative;
   z-index: 2;
 }
@@ -214,7 +234,7 @@ button {
   margin: 0 auto 10px;
   align-items: center;
 }
-.collection-title img {
+.collection-title-img {
   width: 33px;
   height: 44px;
 }
@@ -222,6 +242,7 @@ button {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
+  font-family: "Space Grotesk", sans-serif;
   max-width: 470px;
   margin: 0 auto;
   text-align: center;
@@ -246,13 +267,11 @@ button {
 .item-image {
   position: relative;
 }
-.item-image img {
-  max-width: 330px;
-  height: 330px;
-  border-radius: 10px;
-  object-fit: cover;
+.item-content {
+  margin-top: 28px;
 }
-.item-image button {
+
+.button-like {
   border-radius: 100px;
   display: flex;
   align-items: center;
@@ -264,14 +283,11 @@ button {
   top: 16px;
   right: 16px;
   z-index: 9999999999999;
-  background-color: #FFFFFF;
+  background-color: var(--color-white);
 }
-.item-image button img {
-  width: 24px;
-  height: 24px;
-}
-.item-content {
-  margin-top: 28px;
+
+.img-icon-like {
+  fill: red;
 }
 
 .content-title {
@@ -287,8 +303,13 @@ button {
   line-height: 1.5;
   color: var(--color-gray2);
 }
-.content-text span {
+.content-author {
   color: var(--primarry-color);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
 .price-time {
@@ -305,13 +326,14 @@ button {
   font-size: 14px;
   line-height: 1.5;
   color: var(--color-dark1);
+  font-family: "Poppins", sans-serif;
 }
 
 .cost {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   color: var(--color-dark);
 }
 
