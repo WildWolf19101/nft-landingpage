@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto 0;
+    max-width: 1240px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+
+    &-image {
+        @include size(36px);
+    }
+
+    &-text {
+        @include text(600, 20px, 1.5);
+        color: var(--color-black);
+    }
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+
+    &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+    }
+
+    &-text {
+        @include text(500, 16px, 1.5);
+        color: var(--color-black);
+        text-decoration: none;
+    }
+
+    &-icon {
+        @include size(24px);
+    }
+}

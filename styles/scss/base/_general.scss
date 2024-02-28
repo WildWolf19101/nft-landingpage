@@ -13,26 +13,8 @@ button {
     display: inline-block;
 }
 
-.button {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--color-white);
-    background-color: var(--primarry-color);
-    padding: 18px 50px;
-    border-radius: 100px;
-    font-family: "Poppins", sans-serif;
-    @include text(600, 16px, 1.5);
-}
-
 .title {
     @include text(700, 50px, 1.5);
-}
-
-.text-gradient {
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-image: linear-gradient(to right, #1663F9, #F961D8);
 }
 
 .img {

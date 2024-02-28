@@ -1,0 +1,123 @@
+.collection {
+    margin: 0 auto;
+
+    &-topic {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-title {
+        display: flex;
+        gap: 10px;
+        margin: 0 auto 10px;
+        align-items: center;
+
+        &-img {
+            @include size(33px, 44px);
+        }
+    }
+
+    &-text {
+        @include text(400, 14px, 1.5);
+        font-family: "Space Grotesk", sans-serif;
+        max-width: 470px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1170px;
+        margin: 55px auto 0;
+
+    }
+
+    &-item {
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 20px 80px -16px #2323231A;
+    }
+
+    &-button {
+        margin: 60px auto 0;
+        font-weight: 500;
+    }
+}
+
+.item {
+    &-image {
+        position: relative;
+    }
+
+    &-content {
+        margin-top: 28px;
+    }
+}
+
+.button {
+    &-like {
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include size(48px);
+        border: 0;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        z-index: 9999999999999;
+        background-color: var(--color-white);
+    }
+}
+
+.img-icon-like {
+    fill: red;
+}
+
+.content {
+    &-title {
+        @include text(700, 22px, 1.5);
+        color: var(--color-dark);
+    }
+
+    &-text {
+        font-family: 'Poppins';
+        @include text(500, 16px, 1.5);
+        color: var(--color-gray2);
+    }
+
+    &-author {
+        color: var(--primarry-color);
+        text-decoration: none;
+        @include text(400, 18px, 1.5);
+        font-family: "Be Vietnam Pro", sans-serif;
+    }
+}
+
+.price {
+    &-time {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+    }
+
+    &-total {
+        text-align: right;
+    }
+
+
+}
+
+.infor {
+    @include text(400, 14px, 1.5);
+    color: var(--color-dark1);
+    font-family: "Poppins", sans-serif;
+}
+
+.cost {
+    @include text(400, 18px, 1.5);
+    font-family: "Poppins", sans-serif;
+    color: var(--color-dark);
+}

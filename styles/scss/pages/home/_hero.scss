@@ -1,0 +1,77 @@
+.hero {
+    margin: 0 auto;
+
+    &-topic {
+        text-align: center;
+    }
+
+    &-images {
+        position: relative;
+    }
+
+    &-button {
+        margin: 48px auto 0;
+        font-weight: 500;
+    }
+}
+
+.topic {
+
+    &-title {
+        margin: 40px auto 0;
+        @include text(800, 60px, 1.5);
+        color: var(--color-dark);
+        margin: 40px auto 0;
+        max-width: 1010px;
+    }
+
+    &-text {
+        font-family: "Poppins", sans-serif;
+        @include text(400, 20px, 1.5);
+        color: var(--color-dark);
+        max-width: 653px;
+        margin: 30px auto 0;
+    }
+}
+
+.image {
+
+    &-top {
+        max-width: 1080px;
+        display: flex;
+        margin: 101px auto 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    &-items {
+
+        &:not(:nth-child(2)) {
+            transform: translateY(100px);
+        }
+    }
+
+    &-item {
+        max-width: 360px;
+        height: 494px;
+        object-fit: cover;
+        border-top-left-radius: 1000px;
+        border-top-right-radius: 1000px;
+    }
+
+    &-bottom {
+        max-width: 1170px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        gap: 100px;
+        padding: 70px 0 190px;
+        border: 0;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        background-color: var(--color-white);
+        // transform: translateZ(0);
+        position: relative;
+        z-index: 2;
+    }
+}

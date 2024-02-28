@@ -65,6 +65,23 @@ button {
   display: inline-block;
 }
 
+.title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.5;
+}
+
+.img-item {
+  max-width: 330px;
+  height: 330px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.img-icon-like {
+  width: 24px;
+  height: 24px;
+}
+
 .button {
   display: inline-block;
   text-decoration: none;
@@ -78,28 +95,11 @@ button {
   line-height: 1.5;
 }
 
-.title {
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 1.5;
-}
-
 .text-gradient {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(to right, #1663F9, #F961D8);
-}
-
-.img-item {
-  max-width: 330px;
-  height: 330px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-.img-icon-like {
-  width: 24px;
-  height: 24px;
 }
 
 .header {
@@ -150,6 +150,71 @@ button {
 .menu-icon {
   width: 24px;
   height: 24px;
+}
+
+.footer {
+  margin: 53px auto 0;
+  padding-top: 80px;
+  max-width: 1440px;
+}
+.footer-top {
+  padding-bottom: 112px;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+.footer-columns {
+  max-width: 961px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 120px;
+}
+.footer-heading {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-dark);
+  margin-bottom: 25px;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-link {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-dark1);
+  text-decoration: none;
+}
+.footer-bottom {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-copyright {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-dark1);
+}
+.footer-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.footer-social {
+  padding: 11px;
+  border: 2px solid rgb(240, 240, 240);
+  border-radius: 100px;
+}
+.footer-social img {
+  object-fit: cover;
 }
 
 .main {
@@ -707,7 +772,7 @@ button {
   text-align: center;
 }
 .question-title span {
-  color: #1663F9;
+  color: var(--primarry-color);
 }
 .question-items {
   margin: 80px auto 0;
@@ -745,7 +810,7 @@ button {
 .question-topic__icon {
   width: 30px;
   height: 30px;
-  color: #1663F9;
+  color: var(--primary-color);
 }
 .question-topic__title {
   font-weight: 600;
@@ -772,7 +837,7 @@ button {
   max-width: 766px;
 }
 .community-title span {
-  color: #1663F9;
+  color: var(--primarry-color);
 }
 .community-text {
   margin: 30px 0 44px;
@@ -796,7 +861,7 @@ button {
   margin: 10px;
   border: 0;
   padding: 10px;
-  background-color: #1663F9;
+  background-color: var(--primarry-color);
   border-radius: inherit;
   display: flex;
   justify-content: center;
@@ -816,71 +881,6 @@ button {
   line-height: 1;
   color: var(--color-dark1);
   flex-grow: 1;
-}
-
-.footer {
-  margin: 53px auto 0;
-  padding-top: 80px;
-  max-width: 1440px;
-}
-.footer-top {
-  padding-bottom: 112px;
-  border-bottom: 1px solid rgb(240, 240, 240);
-}
-.footer-columns {
-  max-width: 961px;
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 120px;
-}
-.footer-heading {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #1F2326;
-  margin-bottom: 25px;
-}
-.footer-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.footer-link {
-  display: inline-block;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--color-dark1);
-  text-decoration: none;
-}
-.footer-bottom {
-  padding: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.footer-copyright {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--color-dark1);
-}
-.footer-socials {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-}
-.footer-social {
-  padding: 11px;
-  border: 2px solid rgb(240, 240, 240);
-  border-radius: 100px;
-}
-.footer-social img {
-  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
