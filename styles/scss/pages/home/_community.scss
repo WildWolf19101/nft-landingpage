@@ -1,5 +1,5 @@
 .community {
-    margin: 120px auto 0;
+    margin-top: 120px;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -22,14 +22,12 @@
     }
 
     &-form {
-        width: 630px;
+        max-width: 630px;
         border-radius: 100px;
         border: 1px solid var(--color-grey);
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-
     }
 
     &-button {
@@ -55,6 +53,21 @@
     margin: 27px;
     border: 0;
     @include text(400, 22px, 1);
-    color: var(--color-dark1);
+    color: var(--color-dark);
     flex-grow: 1;
+}
+
+@media screen and (max-width: 767.98px) {
+    .community {
+        margin-top: 60px;
+
+        &-text {
+            margin: 20px 0 30px;
+            font-size: 14px;
+        }
+    }
+
+    .input-email {
+        margin: 19px 30px;
+    }
 }

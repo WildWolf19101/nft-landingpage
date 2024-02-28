@@ -1,5 +1,5 @@
 .seller {
-    margin: 120px auto 0;
+    margin-top: 120px;
     color: var(--color-dark);
 
     &-title {
@@ -15,7 +15,7 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
         max-width: 1170px;
-        margin: 80px auto 0;
+        margin-top: 80px;
     }
 
     &-item {
@@ -60,4 +60,26 @@
         right: 0;
     }
 
+}
+
+@media screen and (max-width: 767.98px) {
+    .seller {
+        margin-top: 108px;
+
+        &-items {
+            margin-top: 40px;
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+    .seller {
+        margin-top: 108px;
+
+        &-items {
+            margin-top: 40px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 }

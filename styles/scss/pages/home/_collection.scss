@@ -1,5 +1,4 @@
 .collection {
-    margin: 0 auto;
 
     &-topic {
         display: flex;
@@ -12,13 +11,17 @@
         margin: 0 auto 10px;
         align-items: center;
 
+        span {
+            color: var(--primarry-color);
+        }
+
         &-img {
             @include size(33px, 44px);
         }
     }
 
     &-text {
-        @include text(400, 14px, 1.5);
+        @include text(400, 18px, 1.5);
         font-family: "Space Grotesk", sans-serif;
         max-width: 470px;
         margin: 0 auto;
@@ -120,4 +123,51 @@
     @include text(400, 18px, 1.5);
     font-family: "Poppins", sans-serif;
     color: var(--color-dark);
+}
+
+@media screen and (max-width: 767.98px) {
+    .collection {
+
+        &-title {
+            gap: 8px;
+            margin: 70px auto 0;
+
+            span {
+                color: var(--primarry-color);
+            }
+
+            &-img {
+                @include size(16px, 21px);
+            }
+        }
+
+        &-text {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        &-items {
+            grid-template-columns: 1fr;
+            margin: 43px auto 0;
+
+        }
+
+        &-button {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+    .collection {
+        &-items {
+            grid-template-columns: repeat(2, 1fr);
+            margin: 43px auto 0;
+        }
+
+        &-button {
+            display: none;
+        }
+    }
+
 }

@@ -18,7 +18,6 @@
 .topic {
 
     &-title {
-        margin: 40px auto 0;
         @include text(800, 60px, 1.5);
         color: var(--color-dark);
         margin: 40px auto 0;
@@ -40,7 +39,6 @@
         max-width: 1080px;
         display: flex;
         margin: 101px auto 0;
-        display: flex;
         justify-content: center;
     }
 
@@ -61,11 +59,11 @@
 
     &-bottom {
         max-width: 1170px;
-        display: flex;
         margin: 0 auto;
+        display: flex;
         justify-content: center;
         gap: 100px;
-        padding: 70px 0 190px;
+        padding: 70px 60px 190px;
         border: 0;
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
@@ -73,5 +71,96 @@
         // transform: translateZ(0);
         position: relative;
         z-index: 2;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .topic {
+
+        &-title {
+            margin-top: 24px;
+            @include text(700, 34px, 1.5);
+            color: var(--color-dark);
+        }
+
+        &-text {
+            font-family: "Poppins", sans-serif;
+            @include text(400, 20px, 1.5);
+            color: var(--color-dark);
+            max-width: 653px;
+            margin-top: 24px;
+        }
+    }
+
+    .image {
+
+        &-top {
+            display: flex;
+            margin-top: 60px;
+            justify-content: center;
+        }
+
+        &-items {
+
+            &:not(:nth-child(2)) {
+                transform: translateY(20px);
+            }
+        }
+
+        &-item {
+            max-width: 110px;
+            height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 1000px;
+            border-top-right-radius: 1000px;
+        }
+
+        &-bottom {
+            max-width: 1170px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 30px 21px 0;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+    .image {
+
+        &-top {
+            display: flex;
+            margin-top: 60px;
+            justify-content: center;
+        }
+
+        &-items {
+
+            &:not(:nth-child(2)) {
+                transform: translateY(20px);
+            }
+        }
+
+        &-item {
+            max-width: 110px;
+            height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 1000px;
+            border-top-right-radius: 1000px;
+        }
+
+        &-bottom {
+            max-width: 1170px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 30px 21px 0;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
     }
 }
