@@ -113,6 +113,15 @@
 
         img {
             @include size(30px);
+
+            &:first-child {
+                transform: translateX(8px);
+            }
+
+            &:last-child {
+                transform: translateX(-8px);
+                z-index: -1;
+            }
         }
     }
 

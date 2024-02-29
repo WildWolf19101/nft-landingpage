@@ -339,8 +339,12 @@ button {
   margin: 101px auto 0;
   justify-content: center;
 }
-.image-items:not(:nth-child(2)) {
-  transform: translateY(100px);
+.image-items:first-child {
+  transform: translate(52px, 100px);
+}
+.image-items:last-child {
+  transform: translate(-52px, 100px);
+  z-index: -1;
 }
 .image-item {
   max-width: 360px;
@@ -362,6 +366,9 @@ button {
   background-color: var(--color-white);
   position: relative;
   z-index: 2;
+}
+.image-trademark {
+  max-width: 150px;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -386,8 +393,12 @@ button {
     margin-top: 60px;
     justify-content: center;
   }
-  .image-items:not(:nth-child(2)) {
-    transform: translateY(20px);
+  .image-items:first-child {
+    transform: translate(16px, 20px);
+  }
+  .image-items:last-child {
+    transform: translate(-16px, 20px);
+    z-index: -1;
   }
   .image-item {
     max-width: 110px;
@@ -401,10 +412,13 @@ button {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     padding: 30px 21px 0;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+  }
+  .image-trademark {
+    max-width: 80px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023.98px) {
@@ -428,7 +442,7 @@ button {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     padding: 30px 21px 0;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -551,9 +565,12 @@ button {
 }
 
 @media screen and (max-width: 767.98px) {
+  .collection {
+    margin-top: 70px;
+  }
   .collection-title {
     gap: 8px;
-    margin: 70px auto 0;
+    margin: 0 auto;
   }
   .collection-title span {
     color: var(--primarry-color);
@@ -831,6 +848,13 @@ button {
 .product-avatar img {
   width: 30px;
   height: 30px;
+}
+.product-avatar img:first-child {
+  transform: translateX(8px);
+}
+.product-avatar img:last-child {
+  transform: translateX(-8px);
+  z-index: -1;
 }
 .product-content {
   padding: 14px 20px;

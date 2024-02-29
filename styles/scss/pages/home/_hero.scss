@@ -40,13 +40,22 @@
         display: flex;
         margin: 101px auto 0;
         justify-content: center;
+        // position: relative;
     }
 
     &-items {
-
-        &:not(:nth-child(2)) {
-            transform: translateY(100px);
+        &:first-child {
+            transform: translate(52px, 100px);
         }
+
+        &:last-child {
+            transform: translate(-52px, 100px);
+            z-index: -1;
+        }
+
+        // &:not(:nth-child(2)) {
+        //     transform: translateY(100px);
+        // }
     }
 
     &-item {
@@ -71,6 +80,10 @@
         // transform: translateZ(0);
         position: relative;
         z-index: 2;
+    }
+
+    &-trademark {
+        max-width: 150px;
     }
 }
 
@@ -102,8 +115,13 @@
 
         &-items {
 
-            &:not(:nth-child(2)) {
-                transform: translateY(20px);
+            &:first-child {
+                transform: translate(16px, 20px);
+            }
+
+            &:last-child {
+                transform: translate(-16px, 20px);
+                z-index: -1;
             }
         }
 
@@ -120,10 +138,14 @@
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
             padding: 30px 21px 0;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
+        }
+
+        &-trademark {
+            max-width: 80px;
         }
     }
 }
@@ -142,6 +164,15 @@
             &:not(:nth-child(2)) {
                 transform: translateY(20px);
             }
+
+            // &:first-child {
+            //     transform: translate(52px, 100px);
+            // }
+
+            // &:last-child {
+            //     transform: translate(-52px, 100px);
+            //     z-index: -1;
+            // }
         }
 
         &-item {
@@ -157,7 +188,7 @@
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
             padding: 30px 21px 0;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
