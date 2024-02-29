@@ -72,7 +72,6 @@ button {
 }
 
 .img-item {
-  max-width: 330px;
   height: 330px;
   border-radius: 10px;
   object-fit: cover;
@@ -202,7 +201,7 @@ button {
   }
 }
 .footer {
-  margin: 53px auto 0;
+  margin-top: 53px;
   padding-top: 80px;
   max-width: 1440px;
 }
@@ -246,6 +245,7 @@ button {
   align-items: center;
 }
 .footer-copyright {
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
@@ -264,8 +264,39 @@ button {
 }
 .footer-social img {
   object-fit: cover;
+  width: 18px;
+  height: 18px;
 }
 
+@media screen and (max-width: 767.98px) {
+  .footer {
+    padding-top: 7px;
+  }
+  .footer-top {
+    padding-bottom: 40px;
+  }
+  .footer-columns {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer-bottom {
+    flex-direction: column-reverse;
+    gap: 30px;
+    padding: 40px 0 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+  .footer {
+    padding-top: 7px;
+  }
+  .footer-top {
+    padding-bottom: 40px;
+  }
+  .footer-columns {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
 .hero {
   margin: 0 auto;
 }
@@ -1142,24 +1173,25 @@ button {
   color: var(--color-dark1);
 }
 .community-form {
-  max-width: 630px;
-  border-radius: 100px;
-  border: 1px solid var(--color-grey);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 100rem;
+  border: 1px solid var(--color-grey);
+  padding: 10px;
+  width: 100%;
+  max-width: 630px;
 }
 .community-button {
   width: 64px;
   height: 64px;
-  margin: 10px;
   border: 0;
-  padding: 10px;
   background-color: var(--primarry-color);
   border-radius: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 .community-button svg {
   width: 32px;
@@ -1168,13 +1200,19 @@ button {
 }
 
 .input-email {
-  margin: 27px;
+  width: 100%;
   border: 0;
   font-weight: 400;
   font-size: 22px;
   line-height: 1;
   color: var(--color-dark);
-  flex-grow: 1;
+  padding-inline: 18px;
+}
+.input-email::-webkit-input-placeholder {
+  color: var(--color-dark1);
+}
+.input-email::-moz-input-placeholder {
+  color: var(--color-dark1);
 }
 
 @media screen and (max-width: 767.98px) {
@@ -1185,8 +1223,12 @@ button {
     margin: 20px 0 30px;
     font-size: 14px;
   }
-  .input-email {
-    margin: 19px 30px;
+  .community-form {
+    padding: 5px;
+  }
+  .community-button {
+    width: 50px;
+    height: 50px;
   }
 }
 

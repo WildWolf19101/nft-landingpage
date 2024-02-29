@@ -22,24 +22,25 @@
     }
 
     &-form {
-        max-width: 630px;
-        border-radius: 100px;
-        border: 1px solid var(--color-grey);
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-radius: 100rem;
+        border: 1px solid var(--color-grey);
+        padding: 10px;
+        width: 100%;
+        max-width: 630px;
     }
 
     &-button {
         @include size(64px);
-        margin: 10px;
         border: 0;
-        padding: 10px;
         background-color: var(--primarry-color);
         border-radius: inherit;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-shrink: 0;
 
         svg {
             @include size(32px);
@@ -50,11 +51,19 @@
 }
 
 .input-email {
-    margin: 27px;
+    width: 100%;
     border: 0;
     @include text(400, 22px, 1);
     color: var(--color-dark);
-    flex-grow: 1;
+    padding-inline: 18px;
+
+    &::-webkit-input-placeholder {
+        color: var(--color-dark1);
+    }
+
+    &::-moz-input-placeholder {
+        color: var(--color-dark1);
+    }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -65,9 +74,13 @@
             margin: 20px 0 30px;
             font-size: 14px;
         }
-    }
 
-    .input-email {
-        margin: 19px 30px;
+        &-form {
+            padding: 5px;
+        }
+
+        &-button {
+            @include size(50px);
+        }
     }
 }
